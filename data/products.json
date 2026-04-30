@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV400 protection sunglasses perfect for summer outings. Polarized lenses reduce glare and eye strain. Lightweight frame fits all face shapes. Includes a protective case and cleaning cloth.",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Tropical Beach Shirt",
+    "brand": "CoastalVibes",
+    "price": 29,
+    "rating": 4.5,
+    "stock": 25,
+    "description": "Vibrant tropical print beach shirt made from 100% breathable cotton. Features a relaxed fit with a button-down front and chest pocket. Perfect for beach days, pool parties, or casual summer outings.",
+    "image": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=500&q=80",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "GlowSafe",
+    "price": 18,
+    "rating": 4.8,
+    "stock": 50,
+    "description": "Broad-spectrum SPF 50 sunscreen that protects against UVA and UVB rays. Water-resistant formula lasts up to 80 minutes. Non-greasy, lightweight texture absorbs quickly into skin without leaving a white cast.",
+    "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&q=80",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Inflatable Beach Float",
+    "brand": "WaveRider",
+    "price": 35,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Giant flamingo-shaped inflatable pool float that can hold up to 200 lbs. Made from premium PVC material that resists punctures. Includes a repair patch kit and storage bag. Great for pools, lakes, and calm beaches.",
+    "image": "https://images.unsplash.com/photo-1530053969600-caed2596d242?w=500&q=80",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Summer Straw Hat",
+    "brand": "SunCrown",
+    "price": 22,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Wide-brim natural straw hat with UPF 50+ protection. Adjustable inner band ensures a perfect fit. The foldable design makes it easy to pack for travel. Stylish and functional for beach, garden, or outdoor festivals.",
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=500&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Aloe Vera After-Sun Gel",
+    "brand": "CoolLeaf",
+    "price": 12,
+    "rating": 4.9,
+    "stock": 60,
+    "description": "Soothing aloe vera gel enriched with vitamin E and cucumber extract. Instantly cools and hydrates sun-exposed skin. Reduces redness and peeling after sun exposure. 99% natural ingredients, paraben-free and cruelty-free.",
+    "image": "https://images.unsplash.com/photo-1601612628452-9e99ced43524?w=500&q=80",
+    "category": "Skincare"
+  },
+  {
+    "id": 7,
+    "name": "Waterproof Beach Bag",
+    "brand": "OceanCarry",
+    "price": 42,
+    "rating": 4.6,
+    "stock": 20,
+    "description": "Large waterproof tote bag perfect for beach days. Features multiple compartments including an insulated cooler pocket for drinks and snacks. Sand-resistant fabric wipes clean easily. Includes a wet bag for swimwear.",
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 8,
+    "name": "Coconut Lip Balm SPF 30",
+    "brand": "GlowSafe",
+    "price": 8,
+    "rating": 4.7,
+    "stock": 100,
+    "description": "Moisturizing lip balm with SPF 30 protection and a tropical coconut scent. Enriched with shea butter and vitamin E to keep lips soft and hydrated. Long-lasting formula that stays on through swimming and outdoor activities.",
+    "image": "https://images.unsplash.com/photo-1586495777744-4e6232bf2844?w=500&q=80",
+    "category": "Skincare"
+  }
+]
