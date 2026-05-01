@@ -29,7 +29,7 @@ export default function ProductCard({ product }) {
         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <Link
             href={`/products/${id}`}
-            className="btn btn-sm bg-white text-amber-600 hover:bg-amber-50 border-0 shadow-md font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+            className="btn btn-sm bg-white text-amber-700 hover:bg-amber-50 border-0 shadow-md font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
           >
             Quick View
           </Link>
@@ -38,7 +38,7 @@ export default function ProductCard({ product }) {
 
       {/* Content */}
       <div className="p-5">
-        <div className="flex items-start justify-between mb-2">
+        <div className="flex items-start justify-between mb-3">
           <div>
             <p className="text-xs text-gray-400 font-medium uppercase tracking-wide">{brand}</p>
             <h3 className="font-display font-bold text-gray-800 text-base leading-tight mt-0.5 line-clamp-2">
@@ -57,7 +57,7 @@ export default function ProductCard({ product }) {
         <div className="flex items-center justify-between">
           <div>
             <span className="font-display text-2xl font-black text-amber-600">${price}</span>
-            <span className="text-xs text-gray-400 ml-1">USD</span>
+            <span className="text-xs text-gray-500 ml-1">USD</span>
           </div>
           <Link
             href={`/products/${id}`}
