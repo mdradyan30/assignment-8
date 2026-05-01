@@ -55,7 +55,7 @@ export default function HeroSlider() {
   const slide = slides[current];
 
   return (
-    <div className={`relative overflow-hidden bg-gradient-to-br ${slide.bg} transition-all duration-700`}
+    <div className={`relative overflow-hidden bg-gradient-to-br ${slide.bg} transition-all duration-800`}
       style={{ minHeight: "500px" }}>
       
       {/* Background Pattern */}
@@ -87,7 +87,7 @@ export default function HeroSlider() {
             
             <div className="flex flex-wrap gap-4">
               <Link href="/#products"
-                className="btn bg-white text-orange-600 hover:bg-amber-50 border-0 shadow-xl font-bold px-8 rounded-full text-sm">
+                className="btn bg-white text-orange-700 hover:bg-amber-50 border-0 shadow-xl font-bold px-8 rounded-full text-sm">
                 {slide.cta} →
               </Link>
               <Link href="/register"
@@ -117,7 +117,7 @@ export default function HeroSlider() {
               </div>
               {/* Floating badges */}
               <div className="absolute -top-4 -right-4 bg-white rounded-2xl px-4 py-2 shadow-xl">
-                <div className="text-orange-500 font-black text-xl">50% OFF</div>
+                <div className="text-orange-600 font-black text-xl">50% OFF</div>
                 <div className="text-gray-500 text-xs">Limited Time</div>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl px-4 py-2 shadow-xl">
