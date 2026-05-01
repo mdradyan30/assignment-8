@@ -1,10 +1,11 @@
 "use client";
 
 import { Toaster } from "react-hot-toast";
+import { SessionProvider } from "better-auth/react";
 
 export default function AuthProvider({ children }) {
   return (
-    <>
+    <SessionProvider>
       {children}
       <Toaster
         position="top-center"
@@ -26,6 +27,6 @@ export default function AuthProvider({ children }) {
           },
         }}
       />
-    </>
+    </SessionProvider>
   );
 }
