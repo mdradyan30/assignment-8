@@ -42,7 +42,7 @@ export default function Navbar() {
               Products
             </Link>
             {session && (
-              <Link href="/my-profile" className="text-gray-600 hover:text-amber-500 transition-colors text-sm font-bold">
+              <Link href="/my-profile" className="text-gray-600 hover:text-amber-500 transition-colors text-sm font-semibold">
                 My Profile
               </Link>
             )}
