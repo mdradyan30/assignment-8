@@ -81,15 +81,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-gray-400">
                 <span className="mt-0.5">📍</span>
-                <span>123 Beach Boulevard, Summer City, SC 90210</span>
+                <span>121/1 Amin Abashik Area, Bandar, Narayanganj</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-400">
                 <span>📞</span>
-                <a href="tel:+18001234567" className="hover:text-amber-400 transition-colors">+1 800-123-4567</a>
+                <a href="tel:+01568793292" className="hover:text-amber-400 transition-colors">+01568793292</a>
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-400">
                 <span>✉️</span>
-                <a href="mailto:hello@suncart.com" className="hover:text-amber-400 transition-colors">hello@suncart.com</a>
+                <a href="mailto:mdradyan30@gmail.com" className="hover:text-amber-400 transition-colors">mdradyan30@gmail.com</a>
               </li>
             </ul>
             <div className="mt-5">
@@ -111,7 +111,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-500">
-            © 2024 SunCart. All rights reserved.
+            © 2026 SunCart. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-xs text-gray-500 hover:text-amber-400 transition-colors">Privacy Policy</a>
