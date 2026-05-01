@@ -33,16 +33,16 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-gray-600 hover:text-amber-500 font-medium transition-colors text-sm">
+          {/* Desktop Nav Links Here */}
+          <div className="hidden md:flex items-center gap-8 font-semibold">
+            <Link href="/" className="text-gray-600 hover:text-amber-500 transition-colors text-sm font-semibold">
               Home
             </Link>
-            <Link href="/#products" className="text-gray-600 hover:text-amber-500 font-medium transition-colors text-sm">
+            <Link href="/#products" className="text-gray-600 hover:text-amber-500 transition-colors text-sm font-bold">
               Products
             </Link>
             {session && (
-              <Link href="/my-profile" className="text-gray-600 hover:text-amber-500 font-medium transition-colors text-sm">
+              <Link href="/my-profile" className="text-gray-600 hover:text-amber-500 transition-colors text-sm font-bold">
                 My Profile
               </Link>
             )}

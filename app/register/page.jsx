@@ -39,7 +39,7 @@ export default function RegisterPage() {
         email: formData.email,
         password: formData.password,
         name: formData.name,
-        image: formData.photoURL || undefined,
+        image: formData.photoURL || "",
       });
 
       if (result?.error) {
