@@ -8,7 +8,7 @@ const popularProducts = products.slice(0, 3);
 
 const brands = [
   { name: "SunShade", emoji: "🕶️", tagline: "UV Protection Experts" },
-  { name: "GlowSafe", emoji: "✨", tagline: "Premium Skincare" },
+  { name: "GlowSafe", emoji: "🧖‍♀️", tagline: "Premium Skincare" },
   { name: "WaveRider", emoji: "🌊", tagline: "Beach Accessories" },
   { name: "CoastalVibes", emoji: "🌴", tagline: "Summer Fashion" },
 ];
@@ -129,7 +129,7 @@ export default function HomePage() {
             {summerTips.map((tip, index) => (
               <div
                 key={index}
-                className= {`p-6 rounded-2xl bg-gradient-to-br ${tip.color} border ${tip.border} hover:shadow-md transition-all duration-300 animate__animated animate__fadeInUp`}
+                className={`p-6 rounded-2xl bg-gradient-to-br ${tip.color} border ${tip.border} hover:shadow-md transition-all duration-300 animate__animated animate__fadeInUp`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-4xl mb-4 wave-float justify-center items-center" style={{ animationDelay: `${index * 0.5}s` }}>
