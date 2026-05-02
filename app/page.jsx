@@ -125,17 +125,17 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto items-center">
             {summerTips.map((tip, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-2xl bg-gradient-to-br ${tip.color} border ${tip.border} hover:shadow-md transition-all duration-300 animate__animated animate__fadeInUp`}
+                className= {`p-6 rounded-2xl bg-gradient-to-br ${tip.color} border ${tip.border} hover:shadow-md transition-all duration-300 animate__animated animate__fadeInUp`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-4xl mb-4 wave-float" style={{ animationDelay: `${index * 0.5}s` }}>
+                <div className="text-4xl mb-4 wave-float justify-center items-center" style={{ animationDelay: `${index * 0.5}s` }}>
                   {tip.icon}
                 </div>
-                <h3 className="font-display font-bold text-gray-800 text-lg mb-2">{tip.title}</h3>
+                <h3 className="font-display font-bold text-gray-800 text-lg mb-2 ">{tip.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{tip.desc}</p>
               </div>
             ))}
