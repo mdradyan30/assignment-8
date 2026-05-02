@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSession, authClient } from "@/lib/auth-client";
+import { useSession, updateProfile } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,7 +31,31 @@ export default function UpdateProfilePage() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    if (name === "image") setPreview(value);
+  };
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+
+    if (file.size > 5 * 1024 * 1024) {
+      toast.error("Image size should be less than 5MB");
+      return;
+    }
+
+
+    if (!file.type.startsWith("image/")) {
+      toast.error("Please upload a valid image file");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const imageData = event.target?.result;
+      setPreview(imageData);
+      setFormData((prev) => ({ ...prev, image: imageData }));
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleSubmit = async (e) => {
@@ -39,10 +63,10 @@ export default function UpdateProfilePage() {
     setLoading(true);
 
     try {
-      const result = await authClient.updateUser({
-        name: formData.name,
-        image: formData.image || undefined,
-      });
+      const result = await updateProfile(
+        formData.name,
+        formData.image || undefined
+      );
 
       if (result?.error) {
         toast.error(result.error.message || "Update failed.");
@@ -81,28 +105,41 @@ export default function UpdateProfilePage() {
             <p className="text-gray-500 text-sm">Keep your information up to date</p>
           </div>
 
-          {/* Preview */}
+          {/* Photo Upload Section - Facebook Style */}
           <div className="flex justify-center mb-8">
-            <div className="relative">
-              {preview ? (
-                <Image
-                  src={preview}
-                  alt="Preview"
-                  width={100}
-                  height={100}
-                  className="w-24 h-24 rounded-full border-4 border-amber-200 shadow-lg object-cover"
-                  onError={() => setPreview("")}
-                />
-              ) : (
-                <div className="w-24 h-24 rounded-full border-4 border-amber-200 shadow-lg bg-gradient-to-br from-amber-300 to-orange-400 flex items-center justify-center">
-                  <span className="text-white font-display font-black text-4xl">
-                    {formData.name?.[0]?.toUpperCase() || "U"}
-                  </span>
+            <div className="relative group w-40 h-40">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                className="hidden"
+                id="avatar-input"
+              />
+              <label htmlFor="avatar-input" className="cursor-pointer block h-full">
+                {preview ? (
+                  <Image
+                    src={preview}
+                    alt="Profile Preview"
+                    width={160}
+                    height={160}
+                    className="w-40 h-40 rounded-full border-4 border-amber-200 shadow-xl object-cover transition-all duration-300 group-hover:shadow-2xl group-hover:border-amber-400"
+                    onError={() => setPreview("")}
+                  />
+                ) : (
+                  <div className="w-40 h-40 rounded-full border-4 border-amber-200 shadow-xl bg-gradient-to-br from-amber-300 to-orange-400 flex items-center justify-center transition-all duration-300 group-hover:shadow-2xl group-hover:border-amber-400">
+                    <span className="text-white font-display font-black text-6xl">
+                      {formData.name?.[0]?.toUpperCase() || "U"}
+                    </span>
+                  </div>
+                )}
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 rounded-full bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                  <div className="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="text-4xl mb-2">📷</div>
+                    <p className="text-sm font-semibold">Change Photo</p>
+                  </div>
                 </div>
-              )}
-              <div className="absolute bottom-0 right-0 w-7 h-7 bg-amber-500 rounded-full border-2 border-white flex items-center justify-center">
-                <span className="text-white text-xs">📷</span>
-              </div>
+              </label>
             </div>
           </div>
 
@@ -121,20 +158,7 @@ export default function UpdateProfilePage() {
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                Profile Photo URL
-              </label>
-              <input
-                type="url"
-                name="image"
-                value={formData.image}
-                onChange={handleChange}
-                placeholder="https://example.com/photo.jpg"
-                className="input input-bordered w-full rounded-xl focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100"
-              />
-              <p className="text-xs text-gray-400 mt-1">Enter a direct URL to your profile image</p>
-            </div>
+            
 
             <div className="flex gap-3 pt-2">
               <Link
