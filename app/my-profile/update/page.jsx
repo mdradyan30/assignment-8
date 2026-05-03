@@ -158,7 +158,34 @@ export default function UpdateProfilePage() {
               />
             </div>
 
-            
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+                Profile Photo
+              </label>
+              <div className="relative">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  className="hidden"
+                  id="image-input"
+                />
+                <label
+                  htmlFor="image-input"
+                  className="flex items-center justify-center w-full px-4 py-3 border-2 border-dashed border-amber-300 rounded-xl cursor-pointer hover:border-amber-500 hover:bg-amber-50 transition-colors bg-amber-50"
+                >
+                  <div className="text-center">
+                    <span className="text-2xl block mb-1">📷</span>
+                    <span className="text-sm font-medium text-gray-700">
+                      Click to upload image
+                    </span>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      PNG, JPG, GIF up to 5MB
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
 
             <div className="flex gap-3 pt-2">
               <Link
